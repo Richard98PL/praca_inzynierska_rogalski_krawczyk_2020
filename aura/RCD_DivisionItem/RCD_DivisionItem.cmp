@@ -1,0 +1,25 @@
+<aura:component description="RCD_DivisionItem" controller="RCD_DivisionController" access="global" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="division" type="Division__c"/>
+    <aura:registerEvent name="c:RCD_SelectedDivisionUpdate" type="c:RCD_SelectedDivisionUpdate"/>
+
+    <div onclick="{!c.divisionSelected}">
+        <div class="slds-grid">
+            <h3 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.division.Name}</h3>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_6-of-12">
+                <div>
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">Street</span></div>
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">{!v.division.Street__c}</span>
+            </div>
+            <div class="slds-col slds-size_3-of-12" >
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">City</span><br/>
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">{!v.division.City__c}</span>
+            </div>
+            <div class="slds-col slds-size_3-of-12" >
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">Country</span><br/>
+                <span class="slds-text-color_weak slds-m-right_small slds-size--1-of-2">{!v.division.Country__c}</span>
+            </div>
+        </div>
+    </div>
+</aura:component>
